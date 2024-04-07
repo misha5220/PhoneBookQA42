@@ -55,9 +55,11 @@ public class BaseTest {
 }
 
 @AfterMethod
-    public void tearDown(){
-       if(driver!=null) driver.quit();
+    public void tearDown() {
+    WebDriver driver1 = getDriver();
+    if (driver1 != null) {
+        driver1.quit();
     }
-
+}
 
 }
