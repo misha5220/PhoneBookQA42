@@ -27,6 +27,6 @@ public class MainPage extends BasePage {
 
     public LoginPage clickLoginButton(){
         loginTopMenuItem.click();
-        return null;
+        return new LoginPage(driver);
     }
 }

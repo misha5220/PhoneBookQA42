@@ -9,6 +9,7 @@ public class PhoneBookTests extends BaseTest {
     @Test
     public void loginTestPositive(){
         MainPage mainPage = new MainPage(getDriver());
+        mainPage.clickLoginButton();
 
     }
 }
