@@ -55,16 +55,12 @@ public class LoginPage extends BasePage {
             return null;
         }
     }
-
-    public BasePage clickByLoginButton(){
+    public <T extends BasePage> T clickByLoginButton(){
         loginButton.click();
         Alert alert = getAlertIfPresent();
-        if (getAlertIfPresent()!=null){
+        if(alert != null){
             alert.accept();
-            return  new LoginPage(driver);
-        }else{
-            return new ContactsPage(driver);
-
-        }
+            return (T) new LoginPage(driver);
+        }else {return (T) new ContactsPage(driver);}
     }
 }
