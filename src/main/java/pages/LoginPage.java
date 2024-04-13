@@ -1,5 +1,6 @@
 package pages;
 
+import com.beust.ah.A;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -55,4 +56,15 @@ public class LoginPage extends BasePage {
         }
     }
 
+    public BasePage clickByLoginButton(){
+        loginButton.click();
+        Alert alert = getAlertIfPresent();
+        if (getAlertIfPresent()!=null){
+            alert.accept();
+            return  new LoginPage(driver);
+        }else{
+            return new ContactsPage(driver);
+
+        }
+    }
 }
