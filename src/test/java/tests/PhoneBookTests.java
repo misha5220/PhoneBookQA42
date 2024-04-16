@@ -16,7 +16,7 @@ import pages.MainPage;
 public class PhoneBookTests extends BaseTest {
 
     @Test
-    public void loginTestPositive() throws InterruptedException {
+    public void loginWithoutPasswordPositive() throws InterruptedException {
         MainPage mainPage = new MainPage(getDriver());
         LoginPage loginPage=BasePage.openTopMenuItem(TopMenuItem.LOGIN);
         Alert alert = loginPage.fillEmailField(EmailGenerator.generateEmail(3,3,2)).clickByRegistrationButton();
@@ -47,9 +47,5 @@ public class PhoneBookTests extends BaseTest {
         ContactsPage contactsPage = loginPage.fillEmailField(PropertiesReader.getProperty("myuser")).fillPasswordField(PropertiesReader.getProperty("mypassword")).clickByLoginButton();
         boolean res = contactsPage.containsSignOutButton();
         Assert.assertTrue(res);
-
-
-
-
     }
 }
