@@ -40,6 +40,7 @@ public class PhoneBookTests extends BaseTest {
                 AddressGenerator.generateAddress(),"desc");
         addPage.fillContactFormAndSave(contact);
         ContactsPage contactsPage = new ContactsPage(getDriver());
+        Assert.assertTrue(contactsPage.getDataFromContact(contact));
 
 
 

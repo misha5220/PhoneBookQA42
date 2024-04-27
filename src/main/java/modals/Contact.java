@@ -1,6 +1,9 @@
 package modals;
 
-public class Contact {
+import java.io.*;
+import java.util.Objects;
+
+public class Contact implements Serializable {
     private String name;
     private String lastName;
     private String phone;
@@ -67,4 +70,32 @@ public class Contact {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Contact contact)) return false;
+        return Objects.equals(getName(), contact.getName()) && Objects.equals(getLastName(), contact.getLastName()) && Objects.equals(getPhone(), contact.getPhone()) && Objects.equals(getEmail(), contact.getEmail()) && Objects.equals(getAddress(), contact.getAddress()) && Objects.equals(getDescription(), contact.getDescription());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getLastName(), getPhone(), getEmail(), getAddress(), getDescription());
+    }
+
+    public static void serializeContact(Contact contact, String fileName) throws IOException {
+        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
+        outputStream.writeObject(contact);
+
+    }
+    public static Contact deserializationContact(String fileName) {
+        try(ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));){
+            return (Contact)   inputStream.readObject();
+
+        }catch (IOException | ClassNotFoundException exception){
+            System.out.println("Error during contact deserialization");
+            return null;
+        }
+    }
+
 }

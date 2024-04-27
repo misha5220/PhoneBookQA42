@@ -58,4 +58,8 @@ public class ContactsPage extends BasePage {
         return result;
     }
 
+    public boolean containsSignOutButton() {
+        WebElement element = driver.findElement(By.xpath("//button[contains(text(),'Sign')]"));
+        return element != null;
+    }
 }
