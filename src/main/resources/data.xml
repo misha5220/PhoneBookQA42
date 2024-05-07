@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-<entry key="user1">mymail@mail.com</entry>
-<entry key="user2">mymail1111@mail.com</entry>
+<entry key="user1">misha11@test.com</entry>
+<entry key="mypassword">MIShaa123!</entry>
+<entry key="user2">misha11@test.com</entry>
 <entry key="maxValue">3</entry>
+<entry key="token">eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibWlzaGExMUB0ZXN0LmNvbSIsImlzcyI6IlJlZ3VsYWl0IiwiZXhwIjoxNzE1NzA2MjA0LCJpYXQiOjE3MTUxMDYyMDR9.u-VxNp48Swfz_7VN2BNdYH7sTbiDNSzlnuL4gBU9pfw</entry>
 </properties>

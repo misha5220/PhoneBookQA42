@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>PhoneBookQA42</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <!-- Define the version of AspectJ -->
     <properties>
@@ -69,12 +69,13 @@
             <artifactId>poi</artifactId>
             <version>5.2.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
+
         <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
@@ -99,7 +100,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.5</version>
+            <version>2.9.1</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -128,5 +129,17 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>2.23.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.4.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.10.0</version>
+        </dependency>
+
     </dependencies>
 </project>

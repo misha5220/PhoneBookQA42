@@ -3,7 +3,7 @@ package tests;
 import config.BaseTest;
 import helpers.*;
 import io.qameta.allure.Allure;
-import modals.Contact;
+import models.Contact;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.Assert;
