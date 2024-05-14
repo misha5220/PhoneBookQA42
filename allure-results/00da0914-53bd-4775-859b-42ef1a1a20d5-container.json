@@ -1,0 +1,1 @@
+{"uuid":"00da0914-53bd-4775-859b-42ef1a1a20d5","name":"PhoneBookQA42","children":[],"befores":[{"name":"loginBeforeDelete","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1715720518939,"stop":1715720520883}],"afters":[],"start":1715720518895,"stop":1715720520898}

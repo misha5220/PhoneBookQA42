@@ -21,13 +21,11 @@ public class LoginTest implements TestHelper {
         AuthenticationRequestModel requestModel = AuthenticationRequestModel
                 .username(PropertiesReaderXML.getProperty("user1",XML_FILE_PATH))
                 .password(PropertiesReaderXML.getProperty("mypassword",XML_FILE_PATH));
-        System.out.println("Request model : "+requestModel.getUsername()+" : "+requestModel.getPassword());
         RequestBody requestBody = RequestBody.create(GSON.toJson(requestModel), JSON);
         Request request = new Request.Builder()
                 .url(BASE_URL+LOGIN_PATH)
                 .post(requestBody)
                 .build();
-        System.out.println("Request : "+request.toString());
         Response response = CLIENT.newCall(request).execute();
         System.out.println("Code response : "+response.code());
         if (response.isSuccessful()){
@@ -44,6 +42,30 @@ public class LoginTest implements TestHelper {
 
     }
 
+    @Test
+    public void loginNegative() throws IOException {
+        AuthenticationRequestModel requestModel = AuthenticationRequestModel
+                .username(PropertiesReaderXML.getProperty("user1",XML_FILE_PATH))
+                .password("FakePassWord46548");
+        System.out.println("Request model : "+requestModel.getUsername()+" : "+requestModel.getPassword());
+        RequestBody requestBody = RequestBody.create(GSON.toJson(requestModel), JSON);
+        Request request = new Request.Builder()
+                .url(BASE_URL+LOGIN_PATH)
+                .post(requestBody)
+                .build();
+        System.out.println("Request : "+request.toString());
+        Response response = CLIENT.newCall(request).execute();
+        System.out.println("Code response : "+response.code());
+        if (!response.isSuccessful()){
+            System.out.println("Status code : " + response.code());
+            ErrorModel errorModel = GSON.fromJson(response.body().string(), ErrorModel.class);
+            System.out.println("Error status : " + errorModel.getStatus());
+            Assert.assertEquals(response.code(), 401);
+        }else {
+            System.out.println("dsadsda");
+        }
+
+    }
 
 
 }
