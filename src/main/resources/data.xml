@@ -2,8 +2,10 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <entry key="user1">misha11@test.com</entry>
+<entry key="fakeuser1">fakemisha11@test.com</entry>
 <entry key="mypassword">MIShaa123!</entry>
 <entry key="user2">misha11@test.com</entry>
+<entry key="contactID">6804bd1c-e652-4a2a-864f-ed4c31775007</entry>
 <entry key="maxValue">3</entry>
-<entry key="token">eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibWlzaGExMUB0ZXN0LmNvbSIsImlzcyI6IlJlZ3VsYWl0IiwiZXhwIjoxNzE2MzIxMDE2LCJpYXQiOjE3MTU3MjEwMTZ9.Df0G1SPb6EylQwwtEL9fX-R1WvI3-MdlQt92skF8du4</entry>
+<entry key="token">eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoibWlzaGExMUB0ZXN0LmNvbSIsImlzcyI6IlJlZ3VsYWl0IiwiZXhwIjoxNzE3MjQ0NzI0LCJpYXQiOjE3MTY2NDQ3MjR9.chvZjxBDG9I6i974klZ07JJnWCb_elBufcRjlKfxejo</entry>
 </properties>

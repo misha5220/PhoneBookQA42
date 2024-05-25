@@ -1,0 +1,75 @@
+HTTP/1.1 200 
+Server: Cowboy
+Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1716392097&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=qWkVceitbVXTiU5AxnPIfPi%2FW5fjhn6Qre5ulakNyUs%3D"}]}
+Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1716392097&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=qWkVceitbVXTiU5AxnPIfPi%2FW5fjhn6Qre5ulakNyUs%3D
+Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+Connection: keep-alive
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 22 May 2024 15:34:57 GMT
+Via: 1.1 vegur
+
+{
+    "contacts": [
+        {
+            "id": "9bbd95db-f1ef-4707-a6b6-bfc3a4f712cd",
+            "name": "Travis",
+            "lastName": "Owens",
+            "email": "ixj@tzb.hco",
+            "phone": "742516503705",
+            "address": "102 Fourth Street, Los Angeles NJ 59915",
+            "description": "desc"
+        },
+        {
+            "id": "fb55fab9-aa65-466b-85c9-b0a9847ed4ce",
+            "name": "Dwayne",
+            "lastName": "Dunn",
+            "email": "zqd@cds.riv",
+            "phone": "23245231528",
+            "address": "177 Park Street, Phoenix NV 04305",
+            "description": "desc"
+        },
+        {
+            "id": "257eba0c-2ac2-46d2-b297-93579d159eab",
+            "name": "Mitchell",
+            "lastName": "Davis",
+            "email": "ttg@npn.nne",
+            "phone": "95633248774510",
+            "address": "197 Oak Street, San Diego AK 48446",
+            "description": "desc"
+        },
+        {
+            "id": "7be42543-57b1-44a8-b011-3543f4a3ea7a",
+            "name": "Enrique",
+            "lastName": "Collins",
+            "email": "fvw@tch.zcd",
+            "phone": "163362232515",
+            "address": "193 First Street, Phoenix AZ 12613",
+            "description": "desc"
+        }
+    ]
+}
+Travis
+ixj@tzb.hco
+Dwayne
+zqd@cds.riv
+Mitchell
+ttg@npn.nne
+Enrique
+fvw@tch.zcd
+++++++++++++++++ 
+===============================================
+Default Suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+

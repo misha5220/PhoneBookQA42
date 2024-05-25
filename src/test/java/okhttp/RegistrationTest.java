@@ -124,4 +124,31 @@ public class RegistrationTest implements TestHelper {
 
     }
 
+    @Test
+    public void registrationTestNegativeExistingUser() throws IOException {
+
+        NewUserModel newUserModel = new NewUserModel(EmailGenerator.generateEmail(3,3,2), PasswordStringGenerator.generatePassword());
+        System.out.println(newUserModel);
+        RequestBody requestBody = RequestBody.create(GSON.toJson(newUserModel),JSON);
+        Request request = new Request.Builder().url(BASE_URL+REGISTRATION_PATH).post(requestBody).build();
+        Response response = CLIENT.newCall(request).execute();
+        String res = response.body().string();
+        System.out.println(response.code());
+        Assert.assertEquals(response.code(),200);
+        System.out.println(newUserModel);
+        response = CLIENT.newCall(request).execute();
+        res = response.body().string();
+        System.out.println(response.code());
+        if(!response.isSuccessful()) {
+            ErrorModel errorModel = GSON.fromJson(res, ErrorModel.class);
+            System.out.println(errorModel.getMessage());
+            Assert.assertEquals(response.code(), 409);
+        } else {
+            AuthenticationResponseModel responseModel =  GSON.fromJson(res,AuthenticationResponseModel.class);
+            String resultToken=responseModel.getToken();
+            Assert.assertEquals(response.code(),409);
+        }
+
+    }
+
 }
