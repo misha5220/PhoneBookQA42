@@ -14,4 +14,5 @@ public class RandomContactGenerator implements TestHelper {
         return contact;
     }
 
+
 }

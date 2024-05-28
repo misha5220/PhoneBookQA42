@@ -1,1 +1,0 @@
-{"uuid":"5f7214c7-7771-4dc6-b152-f197094107c2","name":"PhoneBookQA42","children":["abcd5a0f-ae5a-4430-9db3-a7b29c07a2f4"],"befores":[{"name":"ContactGenerator","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1716646019988,"stop":1716646026116}],"afters":[],"start":1716646019949,"stop":1716646027432}
